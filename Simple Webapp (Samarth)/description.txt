@@ -1,0 +1,4 @@
+After facing challenges, I successfully developed a web application. However, I'm uncertain why I opted to host it on Linux
+
+
+Flag : flag{L1nux_c0mm4nd5_4r3_Aws0m3}

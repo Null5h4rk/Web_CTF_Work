@@ -1,0 +1,1 @@
+Explore the Sports Randomizer CTF Challenge and uncover hidden vulnerabilities lurking in user input. Think outside the box as you navigate unexpected twists to find the flag in secrets  of the application's security, leading to surprising exploits and unexpected victories.

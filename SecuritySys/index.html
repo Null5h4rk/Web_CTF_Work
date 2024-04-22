@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login Page</title>
+    <style>
+        body {
+            background-color: rgb(173, 168, 168);
+            font-family: Arial, sans-serif;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        nav {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 0;
+            width: 100%;
+        }
+
+        nav h1 {
+            margin: 0;
+        }
+
+        #login-container {
+            width: 300px;
+            margin: 20px auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        #password {
+            width: 100%;
+            margin-bottom: 10px;
+            padding: 5px;
+        }
+
+        #go {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <h1>Industry Security System</h1>
+    </nav>
+    <div id="login-container">
+        <h2>Login</h2>
+        <input type="password" id="password" placeholder="Enter password">
+        <button id="go">Login</button>
+    </div>
+    <script>
+        const checkPassword = () => {
+            const v = document.getElementById("password").value;
+            const p = Array.from(v).map(a => 0xCafe + a.charCodeAt(0));
+
+            if (p[0] === 52037 &&
+                p[6] === 52077 &&
+                p[5] === 52053 &&
+                p[1] === 52080 &&
+                p[9] === 52034 &&
+                p[10] === 52083 &&
+                p[4] === 52082 &&
+                p[3] === 52063 &&
+                p[8] === 52073 &&
+                p[12] === 52067 &&
+                p[7] === 52080 &&
+                p[2] === 52067 &&
+                p[11] === 52066) {
+                window.location.replace(v + ".html");
+            } else {
+                alert("Wrong password!");
+            }
+        }
+
+        window.addEventListener("DOMContentLoaded", () => {
+            document.getElementById("go").addEventListener("click", checkPassword);
+            document.getElementById("password").addEventListener("keydown", e => {
+                if (e.keyCode === 13) {
+                    checkPassword();
+                }
+            });
+        }, false);
+    </script>
+</body>
+</html>

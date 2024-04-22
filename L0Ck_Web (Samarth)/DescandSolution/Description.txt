@@ -1,0 +1,7 @@
+"It's important to follow good content discovery methodology on sites you are testing. This is NOT always something like dirbuster or other bruteforcing approaches."
+
+
+
+
+
+

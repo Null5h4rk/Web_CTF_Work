@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>C00m3nts</title>
+    <style>
+        body {
+            background-color: #000;
+            color: #fff;
+            font-family: Arial, sans-serif;
+        }
+        
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #222;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+        
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        
+        h3 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        form {
+            text-align: left;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #333;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 10px;
+            color: #fff;
+        }
+        
+        input[type="text"],
+        textarea,
+        input[type="submit"] {
+            margin-bottom: 10px;
+            padding: 5px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        
+        input[type="submit"] {
+            background-color: #333;
+            color: #fff;
+            cursor: pointer;
+            width: auto;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Leave a message for an administrator</h1>
+        <h3>Our administrative team regularly reviews every message</h3>
+        <form method="post" action="submit.php">
+            <label for="fname">First Name:</label>
+            <input type="text" id="fname" name="fname"><br>
+            <label for="lname">Last Name:</label>
+            <input type="text" id="lname" name="lname"><br>
+            <label for="message">Message:</label>
+            <textarea id="message" name="message"></textarea><br>
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+</body>
+
+</html>
